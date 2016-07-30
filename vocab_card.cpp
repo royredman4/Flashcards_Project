@@ -174,6 +174,7 @@ void Vocab_Card::DeleteTextFile(int fileOption)
 
     if(fileName == VocabListLocation)
     {
+        FileChanged = false;
         ShowTextFiles();
       do{
         cout << "What do you want your default file to be?" << endl;
