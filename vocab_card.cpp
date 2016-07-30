@@ -450,13 +450,6 @@ void Vocab_Card::CheckFile()
 
 }
 
-void Vocab_Card::First_Install()
-{
-
-
-
-}
-
 int Vocab_Card::GetTextFileSize()
 {
     return TextOptions.size();
@@ -909,7 +902,7 @@ void Vocab_Card::MultipleChoiceGame(int chapter)
      }
 
 
-    correct_Choice = random() % option_Count;
+    correct_Choice = rand() % option_Count;
 
 
     disposable = rand() % temp2->definition_count;

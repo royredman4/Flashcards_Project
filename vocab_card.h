@@ -102,7 +102,6 @@ private:
     Dynamic_Array<string> definitions;
 
     bool HasFileChanged(); //Checks if the list has changed so we don't have to overwrite the file if not changed
-    void First_Install();
     void DeleteCard(int, Node*);
     void SpaceReplacer(string&);
     string TestGrade(int);
