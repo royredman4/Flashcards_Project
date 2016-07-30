@@ -266,6 +266,7 @@ void Vocab_Card::SetExamToFile(string textName)
     SpaceReplacer(textName);
     int ExamCount, temp;
     char answer;
+    int tempValue;
     Dynamic_Array<int> Exam_info;
     FileChanged = true;
 
@@ -289,12 +290,20 @@ void Vocab_Card::SetExamToFile(string textName)
     for (int i = 0; i < ExamCount; i++)
     {
         if (i == 0)
+          {
             cout << endl << "Exam 1 starts at chapter 1 and ends at what chapter? ";
-
+            tempValue = 1;
+          }
         else
+          {
             cout << endl << "Exam " << i + 1 << " starts at chapter " << Exam_info[i - 1] + 1 << " and ends at what chapter? ";
-
+            tempValue = Exam_info[i-1] + 1;
+          }
+        do{
         cin >> temp;
+        cin.ignore();
+        }while(temp <= tempValue);
+
         Exam_info.push_back(temp);
     }
 
