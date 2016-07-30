@@ -488,11 +488,11 @@ void Vocab_Card::ShowTextFiles()
         while(!Text.eof())
         {
             Text >> input;
-            if (input == "output.txt" || input == "settings.txt")
+            if (input == "output.txt" || input == "settings.txt" || input == "\0")
                 {}
             else
                 TextOptions.push_back(input);
-
+            input = "\0";
 
         }
 
